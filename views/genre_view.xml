@@ -1,0 +1,65 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record id="genre_list" model="ir.ui.view">
+      <field name="name">genre list</field>
+      <field name="model">adigielite_movie.genre</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="code"/>
+          <field name="name"/>
+          <field name="movie_ids"/> 
+        </tree>
+      </field>
+    </record>
+
+
+    <record id="genre_form" model="ir.ui.view">
+        <field name="name">genre Form</field>
+        <field name="model">adigielite_movie.genre</field>
+        <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <group col="1" string="Genre Details">
+                    <group>
+                        <field name="code"/>
+                        <field name="name"/>
+                        <field name="movie_ids"/>
+                    </group>
+                </group> 
+            </sheet>
+        </form>
+        </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+    
+    <record model="ir.actions.act_window" id="genre_action_window">
+      <field name="name">Genre</field>
+      <field name="res_model">adigielite_movie.genre</field>
+	  <field name="view_ids" eval="[(5, 0, 0), 
+        (0, 0, {'view_mode': 'tree', 'view_id': ref('genre_list')}),
+		(0, 0, {'view_mode': 'form', 'view_id': ref('genre_form')})
+		]"/>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="adigielite_movie.action_server">
+      <field name="name">adigielite_movie server</field>
+      <field name="model_id" ref="model_adigielite_movie_adigielite_movie"/>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+-->
+  </data>
+</odoo>

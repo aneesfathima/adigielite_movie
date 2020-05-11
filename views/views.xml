@@ -1,0 +1,28 @@
+<odoo>
+  <data>
+
+    <!-- Top menu item -->
+
+    <menuitem name="Adigielite Movie" id="adigielite_movie.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Adigielite Movie" id="movie_menu" parent="adigielite_movie.menu_root"/>
+
+
+    <!-- actions -->
+
+    <menuitem name="Movie" id="movie_list" parent="movie_menu"
+              action="movie_action_window"/>
+    <menuitem name="Video" id="video_list" parent="movie_menu"
+              action="video_action_window"/>
+    <menuitem name="Content Rating" id="rating_list" parent="movie_menu"
+              action="rating_action_window"/>
+    <menuitem name="Genre" id="genre_list" parent="movie_menu"
+              action="genre_action_window"/>
+    <menuitem name="Cast" id="cast_list" parent="movie_menu"
+              action="cast_action_window"/>
+
+
+  </data>
+</odoo>

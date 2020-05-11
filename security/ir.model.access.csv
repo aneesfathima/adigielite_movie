@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_adigielite_movie_movie,adigielite_movie.movie,model_adigielite_movie_movie,,1,1,1,1
+access_adigielite_movie_video,adigielite_movie.video,model_adigielite_movie_video,,1,1,1,1
+access_adigielite_movie_content_rating,adigielite_movie.content_rating,model_adigielite_movie_content_rating,,1,1,1,1
+access_adigielite_movie_genre,adigielite_movie.genre,model_adigielite_movie_genre,,1,1,1,1
+access_adigielite_movie_cast,adigielite_movie.cast,model_adigielite_movie_cast,,1,1,1,1
